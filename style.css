@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: consolas;
 }
 
 @font-face {
@@ -24,22 +25,46 @@
   z-index: 1;
 }
 
+.logo-holder::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.logo-holder {
+  position: absolute;
+  height: 150px;
+  width: 40%;
+  top: 150px;
+  text-align: center;
+}
+
+/*
+using the ::before pseudo-element on the .logo-holder to create a separate layer for the background with the desired opacity of 0.3. This way, the opacity of the .logo-holder p and .logo-holder img elements will remain at 1, while the background of .logo-holder will have the opacity of 0.3. */
+
 .logo-holder p {
   color: white;
-  top: 0;
-  left: 120px;
-  font-size: 100px;
+  top: 35px;
+  left: 250px;
+  font-size: 80px;
   font-family: 'Norse-Bold', sans-serif;
   position: absolute;
+  opacity: 1;
+  z-index: 1; /* ensure that the text is above the pseudo-element */
 }
 
 .logo-holder img {
-  z-index: 2;
-  top: 0;
-  left: 0;
+  top: 25px;
+  left: 150px;
   position: absolute;
-  width: 100px;
+  width: 80px;
   height: 100px;
+  opacity: 1;
+  z-index: 1; /* ensure that the image is above the pseudo-element*/
 }
 
 .form-container {
@@ -51,12 +76,75 @@
 
 .info {
   flex: 1;
+  font-size: 20px;
+  margin-top: 30px;
+  margin-left: 33px;
+  margin-bottom: -30px;
 }
 
 .form {
   flex: 1;
+  /* border-color: #e5e7eb; */
+  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.sign-up {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.sign-up fieldset {
+  border: 0;
+}
+
+.sign-up label {
+  font-size: 13px;
+  position: absolute;
+  margin-top: -15px;
+  margin-left: 33px;
+  font-weight: 600;
+}
+
+.sign-up input {
+  margin-left: 33px;
+  margin-bottom: 30px;
+  height: 25px;
+  width: 300px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  background-color: white;
+}
+
+.sign-up input:focus {
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.4);
+  border-color: blue;
+  outline: none;
+}
+
+.sign-up input:invalid {
+  border-color: red;
 }
 
 .buttons {
   flex: 1;
+}
+
+.buttons button {
+  background-color: #596d48;
+  border: 2px solid #596d48;
+  color: white;
+  padding: 4px 20px 4px 20px;
+  margin: 35px 35px 10px 20px;
+  border-radius: 5px;
+}
+
+.buttons p {
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+.buttons p a {
+  text-decoration: none;
+  color: #596d48;
 }
