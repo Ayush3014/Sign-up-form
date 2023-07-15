@@ -17,7 +17,7 @@
       </div>
 
       <div class="form-container">
-        <div class="info" style="border: 3px solid red">
+        <div class="info">
           <p>
             <strong
               >This is not a real online service! You know you need something
@@ -25,39 +25,62 @@
               Sign-Up <em>now</em> to get started.</strong
             >
           </p>
+          <br />
           <p>
             <strong>You <em>know</em> you want to.</strong>
           </p>
         </div>
 
-        <div class="form" style="border: 3px solid blue">
-          <p class="header"><strong>Let's do this!</strong></p>
-          <form action="" class="sign-up">
-            <label for="first-name">FIRST NAME</label>
-            <input type="text" id="first-name" name="first-name" />
+        <div class="form">
+          <p class="header" style="font-size: 20px; margin: 23px 23px">
+            <strong>Let's do this!</strong>
+          </p>
+          <form class="sign-up">
+            <fieldset>
+              <label for="first-name">FIRST NAME</label>
+              <input type="text" id="first-name" name="first-name" required />
+            </fieldset>
 
-            <label for="last-name">LAST NAME</label>
-            <input type="text" id="last-name" name="last-name" />
+            <fieldset>
+              <label for="last-name">LAST NAME</label>
+              <input type="text" id="last-name" name="last-name" required />
+            </fieldset>
 
-            <label for="email">EMAIL</label>
-            <input type="email" id="email" name="email" />
+            <fielset>
+              <label for="email">EMAIL</label>
+              <input type="email" id="email" name="email" required />
+            </fielset>
 
-            <label for="phone">PHONE NUMBER</label>
-            <input type="tel" id="phone" name="phone" />
+            <fielset>
+              <label for="phone">PHONE NUMBER</label>
+              <input type="tel" id="phone" name="phone" required />
+            </fielset>
 
-            <label for="password">PASSWORD</label>
-            <input type="password" id="password" name="password" />
+            <fielset>
+              <label for="password">PASSWORD</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                minlength="8"
+                required
+              />
+            </fielset>
 
-            <label for="confirm-password">CONFIRM PASSWORD</label>
-            <input
-              type="password"
-              id="confirm-password"
-              name="confirm-password"
-            />
+            <fielset>
+              <label for="confirm-password">CONFIRM PASSWORD</label>
+              <input
+                type="password"
+                id="confirm-password"
+                name="confirm-password"
+                minlength="8"
+                required
+              />
+            </fielset>
           </form>
         </div>
 
-        <div class="buttons" style="border: 3px solid violet">
+        <div class="buttons">
           <button>Create Account</button>
           <p>Already have an account? <a href="#">Log in</a></p>
         </div>
