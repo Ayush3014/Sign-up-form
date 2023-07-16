@@ -75,23 +75,31 @@ using the ::before pseudo-element on the .logo-holder to create a separate layer
 }
 
 .info {
-  flex: 1;
+  flex: 0.75;
   font-size: 20px;
   margin-top: 30px;
   margin-left: 33px;
   margin-bottom: -30px;
 }
 
-.form {
-  flex: 1;
-  /* border-color: #e5e7eb; */
-  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.5);
-  position: relative;
-}
-
 .sign-up {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  margin-top: -30px;
+}
+
+.main legend {
+  padding-top: 50px;
+}
+
+.main {
+  flex: 1;
+  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.5);
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column: span 2;
+  padding-top: 50px;
 }
 
 .sign-up fieldset {
@@ -124,6 +132,10 @@ using the ::before pseudo-element on the .logo-holder to create a separate layer
 
 .sign-up input:invalid {
   border-color: red;
+}
+
+.sign-up input:valid {
+  border-color: green;
 }
 
 .buttons {
